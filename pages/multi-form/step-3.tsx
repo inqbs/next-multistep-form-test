@@ -31,7 +31,7 @@ const MultiFormThird: NextPage = () => {
       {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
       <form className="shadow m-4" onSubmit={handleSubmit(onSubmit)}>
         <FormHeader
-          theme={['sky', 'teal']}
+          backgroundColor={['from-emerald-500', 'to-teal-500']}
           title='Album Registeration Form'
         />
 

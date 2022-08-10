@@ -24,7 +24,7 @@ const SingleForm: NextPage = () => {
       {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
       <form className="shadow m-4" onSubmit={handleSubmit(onSubmit)}>
         <FormHeader
-          theme={['sky', 'indigo']}
+          backgroundColor={['from-sky-500', 'to-indigo-500']}
           title='Album Registeration Form'
         />
 

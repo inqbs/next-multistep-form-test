@@ -19,7 +19,7 @@ const MultiFormIndex: NextPage = () => {
     <div className='w-6/12 mx-auto'>
       <div className="shadow m-4">
         <FormHeader
-          theme={['sky', 'teal']}
+          backgroundColor={['from-emerald-500', 'to-teal-500']}
           title='Album Register Complete'
         />
 
