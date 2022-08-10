@@ -1,6 +1,4 @@
-import { Dayjs } from 'dayjs'
-
-type Song = {
+export type Song = {
   title: string
   artist: string
   source?: string
@@ -12,10 +10,10 @@ export type FormFirstPage = {
 }
 export type FormSecondPage = {
   vid: string
-  date: Dayjs
+  date: Date
 }
 export type FormThirdPage = {
-  list: Song[]
+  song: Song[]
 }
 
 export type Form = FormFirstPage & FormSecondPage & FormThirdPage

@@ -1,14 +1,21 @@
 import { NextPage } from 'next'
-import { useState } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
+import { useRouter } from 'next/router'
+import { useForm } from 'react-hook-form'
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
-import FormHeader from '../components/FormHeader'
-import UnderlineInput from '../components/UnderlineInput'
-import { Form } from '../types/FormType'
+import UnderlineInput from '../../components/UnderlineInput'
 
-const SingleForm: NextPage = () => {
+import 'react-datepicker/dist/react-datepicker.css'
+import { useState } from 'react'
+import { Form } from '../../types/FormType'
+import FormHeader from '../../components/FormHeader'
+
+const MultiFormThird: NextPage = () => {
+  const router = useRouter()
   const { register, unregister, handleSubmit, formState: { errors } } = useForm<Form>()
-  const onSubmit: SubmitHandler<Form> = (data) => console.dir(data)
+
+  const onSubmit = () => {
+    void router.push('/multi-form/done')
+  }
 
   const [songLength, setSongLength] = useState(1)
   const addSong = () => setSongLength(songLength => songLength + 1)
@@ -24,27 +31,11 @@ const SingleForm: NextPage = () => {
       {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
       <form className="shadow m-4" onSubmit={handleSubmit(onSubmit)}>
         <FormHeader
-          theme={['sky', 'indigo']}
+          theme={['sky', 'teal']}
           title='Album Registeration Form'
         />
 
-        <fieldset className='block w-full mb-4 p-4'>
-          <legend className='text-lg font-bold'>Artist</legend>
-          <UnderlineInput type="text" {...register('name', { required: true })} placeholder='Name' />
-          <p className='text-red-500'>{(errors.name != null) && 'name is required'}</p>
-          <UnderlineInput type="email" {...register('email', { required: true })} placeholder='Email' />
-          <p className='text-red-500'>{(errors.email != null) && 'email is required'}</p>
-        </fieldset>
-
-        <fieldset className='block w-full mb-4 p-4'>
-          <legend className='text-lg font-bold'>Album</legend>
-          <UnderlineInput type="text" {...register('vid', { required: true })} placeholder='Video link' />
-          <p className='text-red-500'>{(errors.vid != null) && 'video id is required'}</p>
-          <UnderlineInput type="datetime" {...register('date', { required: true })} placeholder='Release date' />
-          <p className='text-red-500'>{(errors.date != null) && 'date is required'}</p>
-        </fieldset>
-
-        <fieldset className='block w-full mb-4 p-4'>
+         <fieldset className='block w-full mb-4 p-4'>
           <legend className="flex justify-between w-full">
             <h3 className='text-lg font-bold'>Song List</h3>
             <div className="flex gap-4">
@@ -72,10 +63,12 @@ const SingleForm: NextPage = () => {
           }
         </fieldset>
 
-        <button className='p-3 w-full text-white font-bold tracking-widest bg-blue-600 hover:bg-blue-500 active:bg-blue-400 transition uppercase' type="submit">submit</button>
+        <button className='block p-3 w-full text-center text-white font-bold tracking-widest transition uppercase bg-teal-600 hover:bg-teal-500 active:bg-teal-400'>
+          SUBMIT
+        </button>
       </form>
     </div>
   )
 }
 
-export default SingleForm
+export default MultiFormThird
