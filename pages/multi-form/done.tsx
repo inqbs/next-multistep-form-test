@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import FormHeader from '../../components/FormHeader'
+import Stepper from '../../components/Stepper'
 import { Form } from '../../types/FormType'
 
 const MultiFormIndex: NextPage = () => {
@@ -22,6 +23,10 @@ const MultiFormIndex: NextPage = () => {
           backgroundColor={['from-emerald-500', 'to-teal-500']}
           title='Album Register Complete'
         />
+
+        <div className="m-4 p-4">
+          <Stepper current={4} steps={4} />
+        </div>
 
         <section className='block w-full p-4'>
           <h2 className='text-lg font-bold mb-4'>Result</h2>

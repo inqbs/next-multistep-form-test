@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import FormHeader from '../../components/FormHeader'
+import Stepper from '../../components/Stepper'
 import UnderlineInput from '../../components/UnderlineInput'
 import { Form } from '../../types/FormType'
 
@@ -21,6 +22,10 @@ const MultiFormFirst: NextPage = () => {
           backgroundColor={['from-emerald-500', 'to-teal-500']}
           title='Album Registeration Form'
         />
+
+        <div className="m-4 p-4">
+          <Stepper current={1} steps={4} />
+        </div>
 
         <fieldset className='block w-full mb-4 p-4'>
           <legend className='text-lg font-bold'>Name</legend>

@@ -7,6 +7,7 @@ import UnderlineInput from '../../components/UnderlineInput'
 import 'react-datepicker/dist/react-datepicker.css'
 import { Form } from '../../types/FormType'
 import FormHeader from '../../components/FormHeader'
+import Stepper from '../../components/Stepper'
 
 const MultiFormSecond: NextPage = () => {
   const router = useRouter()
@@ -24,6 +25,10 @@ const MultiFormSecond: NextPage = () => {
           backgroundColor={['from-emerald-500', 'to-teal-500']}
           title='Album Registeration Form'
         />
+
+        <div className="m-4 p-4">
+          <Stepper current={2} steps={4} />
+        </div>
 
         <fieldset className='block w-full mb-4 p-4'>
           <legend className='text-lg font-bold'>MV Video</legend>

@@ -14,7 +14,7 @@ const MultiFormIndex: NextPage = () => {
           title='Album Registeration Form'
         />
 
-        <section className='block w-full p-4 '>
+        <section className='block w-full p-4'>
           <h2 className='text-lg font-bold mb-4'>Notice</h2>
           <div className='bg-gray-100 text-gray-700 p-4'>
             <p className='text-justify mb-3'>

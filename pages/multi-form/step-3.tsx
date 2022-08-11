@@ -8,6 +8,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 import { useState } from 'react'
 import { Form } from '../../types/FormType'
 import FormHeader from '../../components/FormHeader'
+import Stepper from '../../components/Stepper'
 
 const MultiFormThird: NextPage = () => {
   const router = useRouter()
@@ -34,6 +35,10 @@ const MultiFormThird: NextPage = () => {
           backgroundColor={['from-emerald-500', 'to-teal-500']}
           title='Album Registeration Form'
         />
+
+        <div className="m-4 p-4">
+          <Stepper current={3} steps={4} />
+        </div>
 
          <fieldset className='block w-full mb-4 p-4'>
           <legend className="flex justify-between w-full">
