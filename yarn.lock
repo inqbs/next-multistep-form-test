@@ -1943,6 +1943,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.10.4":
+  version: 3.10.4
+  resolution: "gsap@npm:3.10.4"
+  checksum: 0c965c6e46a02198ba1662e338eb48123d65b49f41263223cfcd326abf734a5fbdeddcaf877ded610735408cd1e8e599da79ab954823daf7fe2f6b53d3807009
+  languageName: node
+  linkType: hard
+
 "has-bigints@npm:^1.0.1, has-bigints@npm:^1.0.2":
   version: 1.0.2
   resolution: "has-bigints@npm:1.0.2"
@@ -2647,6 +2654,7 @@ __metadata:
     eslint: 8.21.0
     eslint-config-next: 12.2.4
     eslint-config-standard-with-typescript: ^22.0.0
+    gsap: ^3.10.4
     next: 12.2.4
     postcss: ^8.4.16
     react: 18.2.0
