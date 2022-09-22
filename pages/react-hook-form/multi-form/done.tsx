@@ -2,9 +2,9 @@ import dayjs from 'dayjs'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
-import FormHeader from '../../components/FormHeader'
-import Stepper from '../../components/Stepper'
-import { Form } from '../../types/FormType'
+import FormHeader from '../../../components/FormHeader'
+import Stepper from '../../../components/Stepper'
+import { Form } from '../../../types/FormType'
 
 const MultiFormIndex: NextPage = () => {
   const { getValues, reset } = useForm<Form>()

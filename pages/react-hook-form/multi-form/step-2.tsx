@@ -2,19 +2,19 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { Controller, useForm } from 'react-hook-form'
 import DatePicker from 'react-datepicker'
-import UnderlineInput from '../../components/UnderlineInput'
+import UnderlineInput from '../../../components/UnderlineInput'
 
 import 'react-datepicker/dist/react-datepicker.css'
-import { Form } from '../../types/FormType'
-import FormHeader from '../../components/FormHeader'
-import Stepper from '../../components/Stepper'
+import { Form } from '../../../types/FormType'
+import FormHeader from '../../../components/FormHeader'
+import Stepper from '../../../components/Stepper'
 
 const MultiFormSecond: NextPage = () => {
   const router = useRouter()
   const { register, handleSubmit, control, formState: { errors } } = useForm<Form>()
 
   const onSubmit = () => {
-    void router.push('/multi-form/step-3')
+    void router.push('/react-hook-form/multi-form/step-3')
   }
 
   return (

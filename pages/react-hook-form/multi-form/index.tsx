@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { useState } from 'react'
-import FormHeader from '../../components/FormHeader'
+import FormHeader from '../../../components/FormHeader'
 
 const MultiFormIndex: NextPage = () => {
   const [agree, setAgree] = useState(false)
@@ -34,7 +34,7 @@ const MultiFormIndex: NextPage = () => {
           <label htmlFor="agree-checkbox" className='ml-2 text-sm font-bold'>I have confirmed that</label>
         </section>
 
-        <Link href='/multi-form/step-1'>
+        <Link href='/react-hook-form/multi-form/step-1'>
           <a className={'block p-3 w-full text-center text-white font-bold tracking-widest transition uppercase ' + (!agree ? 'pointer-events-none bg-gray-200' : 'bg-teal-600 hover:bg-teal-500 active:bg-teal-400')}>
             NEXT
           </a>

@@ -1,17 +1,17 @@
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
-import FormHeader from '../../components/FormHeader'
-import Stepper from '../../components/Stepper'
-import UnderlineInput from '../../components/UnderlineInput'
-import { Form } from '../../types/FormType'
+import FormHeader from '../../../components/FormHeader'
+import Stepper from '../../../components/Stepper'
+import UnderlineInput from '../../../components/UnderlineInput'
+import { Form } from '../../../types/FormType'
 
 const MultiFormFirst: NextPage = () => {
   const router = useRouter()
   const { register, handleSubmit, formState: { errors } } = useForm<Form>()
 
   const onSubmit = () => {
-    void router.push('/multi-form/step-2')
+    void router.push('/react-hook-form/multi-form/step-2')
   }
 
   return (

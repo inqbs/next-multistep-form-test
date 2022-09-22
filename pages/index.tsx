@@ -46,10 +46,10 @@ const Home: NextPage = () => {
           <div className='w-full max-w-6xl mx-auto mt-96'>
             <h2 className='text-5xl font-bold mb-8'>Single/Multistep Form Test</h2>
             <div className='flex gap-3'>
-              <Link href='/single-form'>
+              <Link href='/react-hook-form/single-form'>
                 <a className='px-4 py-2 text-sm font-bold text-blue-700 bg-blue-200 rounded-full'>Test Single Form Now →</a>
               </Link>
-              <Link href='/multi-form'>
+              <Link href='/react-hook-form/multi-form'>
                 <a className='px-4 py-2 text-sm font-bold text-teal-600 bg-teal-200 rounded-full'>Test Multistep Form Now →</a>
               </Link>
             </div>

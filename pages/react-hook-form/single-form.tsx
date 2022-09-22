@@ -2,9 +2,9 @@ import { NextPage } from 'next'
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
-import FormHeader from '../components/FormHeader'
-import UnderlineInput from '../components/UnderlineInput'
-import { Form } from '../types/FormType'
+import FormHeader from '../../components/FormHeader'
+import UnderlineInput from '../../components/UnderlineInput'
+import { Form } from '../../types/FormType'
 
 const SingleForm: NextPage = () => {
   const { register, unregister, handleSubmit, formState: { errors } } = useForm<Form>()

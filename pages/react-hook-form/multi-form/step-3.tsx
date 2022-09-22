@@ -2,20 +2,20 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useForm } from 'react-hook-form'
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
-import UnderlineInput from '../../components/UnderlineInput'
+import UnderlineInput from '../../../components/UnderlineInput'
 
 import 'react-datepicker/dist/react-datepicker.css'
 import { useState } from 'react'
-import { Form } from '../../types/FormType'
-import FormHeader from '../../components/FormHeader'
-import Stepper from '../../components/Stepper'
+import { Form } from '../../../types/FormType'
+import FormHeader from '../../../components/FormHeader'
+import Stepper from '../../../components/Stepper'
 
 const MultiFormThird: NextPage = () => {
   const router = useRouter()
   const { register, unregister, handleSubmit, formState: { errors } } = useForm<Form>()
 
   const onSubmit = () => {
-    void router.push('/multi-form/done')
+    void router.push('/react-hook-form/multi-form/done')
   }
 
   const [songLength, setSongLength] = useState(1)
@@ -40,7 +40,7 @@ const MultiFormThird: NextPage = () => {
           <Stepper current={3} steps={4} />
         </div>
 
-         <fieldset className='block w-full mb-4 p-4'>
+        <fieldset className='block w-full mb-4 p-4'>
           <legend className="flex justify-between w-full">
             <h3 className='text-lg font-bold'>Song List</h3>
             <div className="flex gap-4">
