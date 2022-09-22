@@ -1,7 +1,11 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "standard-with-typescript"
+    "plugin:react/jsx-runtime",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -11,6 +15,19 @@
       "error",
       "type"
     ],
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/semi": "off",
+    "semi": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": [
+      "warn",
+      {
+        "namedComponents": [
+          "function-declaration",
+          "arrow-function"
+        ]
+      }
+    ]
   }
 }

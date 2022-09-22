@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { unescape } from 'html-escaper';
+import { unescape } from 'html-escaper'
 import ogs, { ErrorResult, SuccessResult } from 'open-graph-scraper'
 
 import { csrf } from '../../utils/csrf'
@@ -8,7 +8,7 @@ type Data = SuccessResult | ErrorResult
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Data>,
 ) {
   await csrf(req, res).catch(() => {
     res.status(403).end()
