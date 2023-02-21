@@ -16,4 +16,4 @@ export type FormThirdPage = {
   song: Song[]
 }
 
-export type Form = FormFirstPage & FormSecondPage & FormThirdPage
+export type FormType = FormFirstPage & FormSecondPage & FormThirdPage

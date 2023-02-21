@@ -19,7 +19,7 @@ const MultiFormSecond: NextPage = () => {
   } = useForm<Form>()
 
   const onSubmit = () => {
-    void router.push('/react-hook-form/multi-form/step-3')
+    router.push('/react-hook-form/multi-form/step-3')
   }
 
   return (

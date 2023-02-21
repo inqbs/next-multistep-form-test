@@ -4,7 +4,8 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 import FormHeader from '../../components/FormHeader'
 import UnderlineInput from '../../components/UnderlineInput'
-import { Form } from '../../types/FormType'
+
+import { FormType } from '../../types/FormType'
 
 const SingleForm: NextPage = () => {
   const {
@@ -13,14 +14,14 @@ const SingleForm: NextPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<Form>()
-  const onSubmit: SubmitHandler<Form> = (data) => console.dir(data)
+  const onSubmit: SubmitHandler<Form> = data => console.dir(data)
 
   const [songLength, setSongLength] = useState(1)
-  const addSong = () => setSongLength((songLength) => songLength + 1)
+  const addSong = () => setSongLength(songLength => songLength + 1)
   const removeSong = () => {
     if (songLength > 1) {
       unregister(`song.${songLength - 1}`)
-      setSongLength((songLength) => Math.max(songLength - 1, 1))
+      setSongLength(songLength => Math.max(songLength - 1, 1))
     }
   }
 
@@ -64,10 +65,7 @@ const SingleForm: NextPage = () => {
             .fill('')
             .map((_, idx) => (
               <div key={`song-${idx}`} className="flex justify-between items-center gap-4">
-                <span className="inline-block font-bold w-3">
-                  {idx + 1}
-                  .
-                </span>
+                <span className="inline-block font-bold w-3">{idx + 1}.</span>
                 <UnderlineInput
                   type="text"
                   {...register(`song.${idx}.title`, { required: true })}
@@ -81,7 +79,7 @@ const SingleForm: NextPage = () => {
                 />
               </div>
             ))}
-          {Boolean(Array(errors.song)?.some?.((it) => it != null) ?? false) && (
+          {Boolean(Array(errors.song)?.some?.(it => it != null) ?? false) && (
             <p className="text-red-500">Song info is required</p>
           )}
         </fieldset>

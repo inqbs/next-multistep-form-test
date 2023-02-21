@@ -8,14 +8,12 @@ import { Form } from '../../../types/FormType'
 
 const MultiFormIndex: NextPage = () => {
   const { getValues, reset } = useForm<Form>()
-  const {
-    name, email, vid, date, song,
-  } = getValues()
+  const { name, email, vid, date, song } = getValues()
 
   const router = useRouter()
   const onLeave = () => {
     reset()
-    void router.push('/')
+    router.push('/')
   }
 
   return (
@@ -43,10 +41,7 @@ const MultiFormIndex: NextPage = () => {
               <ul>
                 {song?.map?.((item, idx) => (
                   <li key={`song-${idx}`}>
-                    {item.title}
-                    {' '}
-                    /
-                    {item.artist}
+                    {item.title} /{item.artist}
                   </li>
                 ))}
               </ul>

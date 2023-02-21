@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import dayjs from 'dayjs'
-import { Form, FormFirstPage, FormSecondPage, FormThirdPage } from '../types/FormType'
+import { FormType, FormFirstPage, FormSecondPage, FormThirdPage } from '../types/FormType'
 
 export const useMultiForm = () => {
   const [form, setForm] = useState<Form>()

@@ -20,15 +20,15 @@ const MultiFormThird: NextPage = () => {
   } = useForm<Form>()
 
   const onSubmit = () => {
-    void router.push('/react-hook-form/multi-form/done')
+    router.push('/react-hook-form/multi-form/done')
   }
 
   const [songLength, setSongLength] = useState(1)
-  const addSong = () => setSongLength((songLength) => songLength + 1)
+  const addSong = () => setSongLength(songLength => songLength + 1)
   const removeSong = () => {
     if (songLength > 1) {
       unregister(`song.${songLength - 1}`)
-      setSongLength((songLength) => Math.max(songLength - 1, 1))
+      setSongLength(songLength => Math.max(songLength - 1, 1))
     }
   }
 
@@ -60,10 +60,7 @@ const MultiFormThird: NextPage = () => {
             .fill('')
             .map((_, idx) => (
               <div key={`song-${idx}`} className="flex justify-between items-center gap-4">
-                <span className="inline-block font-bold w-3">
-                  {idx + 1}
-                  .
-                </span>
+                <span className="inline-block font-bold w-3">{idx + 1}.</span>
                 <UnderlineInput
                   type="text"
                   {...register(`song.${idx}.title`, { required: true })}
@@ -77,7 +74,7 @@ const MultiFormThird: NextPage = () => {
                 />
               </div>
             ))}
-          {Boolean(Array(errors.song)?.some?.((it) => it != null) ?? false) && (
+          {Boolean(Array(errors.song)?.some?.(it => it != null) ?? false) && (
             <p className="text-red-500">Song info is required</p>
           )}
         </fieldset>
